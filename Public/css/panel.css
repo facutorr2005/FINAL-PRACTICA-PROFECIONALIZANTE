@@ -1,0 +1,340 @@
+:root{
+    --color-principal: rgb(231, 230, 216);
+    --color-secundario: rgb(238, 238, 9);
+    --color-terciario: rgba(0, 0, 0, 0.349);
+    --color-cuarto: black;
+    --fuente: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--fuente);
+    background-color: var(--color-principal);
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado{
+    background-color: var(--color-secundario);
+    min-height: 8rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: solid 3px var(--color-terciario);
+    padding: 1rem 2rem;
+    flex-shrink: 0;
+    flex-wrap: wrap; 
+}
+
+.logo-titulo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 1;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: none;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.titulo{
+    font-size: clamp(30px, 5vw, 70px);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.botones{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-left: auto; 
+}
+
+.boton{
+    border: none;
+    border-radius: 7px;
+    font-size: clamp(14px, 1.5vw, 20px);
+    min-width: 7rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-principal);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover{
+    background-color: rgb(192, 192, 191);
+}
+
+/* ===== Menú hamburguesa ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-cuarto);
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.abierto {
+    transform: rotate(90deg);
+}
+
+/* 🔧 Aumenté el punto de quiebre del menú hamburguesa de 600px a 900px */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .botones {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-secundario);
+        border-top: 2px solid var(--color-terciario);
+        padding: 1rem 0;
+        text-align: center;
+        gap: 1rem;
+        animation: aparecer 0.3s ease forwards;
+    }
+
+    .botones.activo {
+        display: flex;
+    }
+
+    @keyframes aparecer {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .boton {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+/* ===== Contenido principal ===== */
+.contenido{
+    flex: 1;
+    background-color: var(--color-principal);
+    width: min(90%, 1200px);
+    margin: 2rem auto;
+    display: grid;   
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* 🔧 Aumenté la altura base de las imágenes */
+.oferta{
+    width: 100%;
+    height: 300px; /* antes 250px */
+    object-fit: cover;
+    border: solid 7px var(--color-cuarto);
+    border-radius: 7px;
+}
+
+/* ===== Pie de página ===== */
+.pie-pagina{
+    min-height: 7rem;
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-top: solid 3px var(--color-terciario);
+    padding: 2rem clamp(1rem, 5vw, 7rem);
+    gap: 2rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.titulo-pie{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.info-pie{
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-bottom: 0.3rem;
+}
+
+.enlace-pie{
+    text-decoration: none;
+    color: var(--color-cuarto);
+    transition: opacity 0.3s ease;
+}
+
+.enlace-pie:hover{
+    opacity: 0.7;
+}
+
+.contactos, .contactos-desarrollo, .redes-sociales{
+    flex: 1;
+    min-width: 200px;
+    padding: 0 1rem;
+    border-left: solid 2px var(--color-terciario);
+    border-right: solid 2px var(--color-terciario);
+}
+
+/* ===== Responsividad general ===== */
+@media (max-width: 1024px) {
+    .encabezado {
+        padding: 1rem;
+    }
+    
+    .contenido {
+        width: 92%;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.2rem;
+    }
+    
+    .oferta {
+        height: 270px; /* antes 220px */
+    }
+    
+    .pie-pagina {
+        padding: 1.5rem clamp(1rem, 3vw, 3rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .logo-titulo {
+        gap: 0.8rem;
+    }
+    
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .botones {
+        justify-content: center;
+        margin-left: 0;
+    }
+    
+    .boton {
+        min-width: 6rem;
+    }
+    
+    .contenido {
+        width: 95%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .oferta {
+        height: 240px; 
+    }
+    
+    .pie-pagina {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .contactos, .contactos-desarrollo, .redes-sociales {
+        border-left: none;
+        border-right: none;
+        border-top: solid 2px var(--color-terciario);
+        padding: 1rem 0;
+        text-align: center;
+        min-width: 100%;
+    }
+    
+    .contactos {
+        border-top: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 1rem 0.5rem;
+    }
+    
+    .contenido {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0.8rem;
+        margin: 1rem auto;
+    }
+    
+    .oferta {
+        height: 200px; /* antes 180px */
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado {
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .botones {
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .boton {
+        width: 100%;
+        padding: 0.6rem 1rem;
+    }
+    
+    .contenido {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .oferta {
+        height: 220px; /* antes 200px */
+        max-width: 100%;
+    }
+    
+    .pie-pagina {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .oferta {
+        height: 180px; /* antes 160px */
+    }
+}
