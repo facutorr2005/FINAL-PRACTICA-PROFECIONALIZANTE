@@ -1,5 +1,7 @@
-.body {
-    background-color: #e70202;
+body {
+    background-color: black;
+    felx-direction: column;
+    display: flex;
 
 
 }
@@ -8,16 +10,24 @@
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: yellow;
+    border-radius: 15px;
 }
 
-.H2 {
+.h2 {
     text-align: center;
-    color: #e60909;
+    color: #b95252;
 }
 
 P {
     color: red
+}
+
+button {
+    cursor: pointer;
+    background-color:
+}
+
+h3 {
+    cursor: pointer;
 }
