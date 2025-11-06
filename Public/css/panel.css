@@ -207,7 +207,7 @@ body{
     }
     
     .oferta {
-        height: 270px; /* antes 220px */
+        height: 300px; 
     }
     
     .pie-pagina {
@@ -247,10 +247,6 @@ body{
         margin: 1.5rem auto;
     }
     
-    .oferta {
-        height: 240px; 
-    }
-    
     .pie-pagina {
         flex-direction: column;
         align-items: stretch;
@@ -282,10 +278,7 @@ body{
         gap: 0.8rem;
         margin: 1rem auto;
     }
-    
-    .oferta {
-        height: 200px; /* antes 180px */
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -319,7 +312,6 @@ body{
     }
     
     .oferta {
-        height: 220px; /* antes 200px */
         max-width: 100%;
     }
     

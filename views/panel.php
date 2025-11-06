@@ -27,6 +27,7 @@
             <button onclick="location.href='compra.php'" class="boton">Iniciar Compra</button>
             <button onclick="location.href='historial.php'" class="boton">Historial Compras</button>
             <button onclick="location.href='perfil.php'" class="boton">Mi Perfil</button>
+            <button onclick="location.href='../App/Controllers/noseController.php'" class="boton">Cerrar Sesión</button>
         </div>
     </div>
 
