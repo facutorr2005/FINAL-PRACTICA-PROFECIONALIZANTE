@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(231, 230, 216);
+    font-family:'Poppins', sans-serif ;
+    display: flex;
+    justify-content:center;
+    align-items:center ;
+    
+}
+.contenedor{
+    background-color: rgb(238, 238, 9);
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
