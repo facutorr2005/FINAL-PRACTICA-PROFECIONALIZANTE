@@ -60,10 +60,7 @@
         });
 
         confirmarCancelar.addEventListener('click', () => {
-            carrito.length = 0;
-            actualizarCarrito();
-            modal.style.display = 'none';
-            mostrarError('El carrito está vacío.');
+            window.location.href="http://localhost/FINAL-PRACTICA-PROFECIONALIZANTE/views/panel.php"
         });
 
         document.getElementById('scanBtn').addEventListener('click', async () => {

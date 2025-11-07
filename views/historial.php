@@ -39,7 +39,7 @@
             ]; 
             ?>
             <?php foreach ($compras as $c): ?>
-                <div>
+                <div class= "compra" >
                     <?= $c->Sucursal ?> -
                     <?= $c->Direccion ?> -
                     <?= $c->Fecha ?> - Total: 
