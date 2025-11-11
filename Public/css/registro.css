@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: beige;
     felx-direction: column;
     display: flex;
 
@@ -14,14 +14,17 @@ body {
     border-radius: 15px;
 }
 
-.h2 {
-    text-align: center;
-    color: #b95252;
+.form {
+    display: flex;
+    flex-direction: column;
 }
 
-P {
-    color: red
+.h2 {
+    text-align: center;
+
+
 }
+
 
 button {
     cursor: pointer;
@@ -30,4 +33,46 @@ button {
 
 h3 {
     cursor: pointer;
+}
+
+.input1 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input2 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input3 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input4 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input5 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input6 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
+}
+
+.input7 {
+    background-color: black;
+    margin-bottom: 10px;
+    height: 15px;
 }

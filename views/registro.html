@@ -13,31 +13,34 @@
 <body>
     <div class="container">
         <h2>Registro de usuario </h2>
-        
-        <label for="username">ingrese su nombre</label>
-        <input type="text" id="username" name="username" required class="input">
-
-        <label for="apellido">ingrese su apellido</label>
-        <input type="tex" id="apellido" name="apellido" required>
-
-
-        <label for="dni"> ingrese su dni </label>
-        <input type="text" id="dni" name="dni" required>
-
-        <label for="email"> ingrese su correo electronico</label>
-        <input type="text" id="email" name="email" required>
-
-        <label for="fecha de nacimiento">Ingrese fecha de nacimiento</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
-
-
-        <label for="password">ingrese contraseña</label>
-        <input type="password" id="password" name="password" required>
 
         <form action="register" method="post"></form>
 
-        <label for="password"> confirme su contraseña</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+        <label for="username"></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required class="input1">
+
+        <label for="apellido"></label>
+        <input type="tex" id="apellido" name="apellido" placeholder="Ingrese su apellido" required class="input2">
+
+
+        <label for="dni"></label>
+        <input type="text" id="dni" name="dni" placeholder="ingrese su dni" required class="input3">
+
+        <label for="email"> </label>
+        <input type="text" id="email" name="email" placeholder="ingrese su correo" required class="input4">
+
+        <label for="fecha de nacimiento"></label>
+        <input type="date" id="fecha_nacimiento" name="fecha" placeholder="fecha de nacimiento" required class="input5">
+
+
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="ingrese su contraseña" required
+            class="input6">
+
+
+        <label for="password"></label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirme su contraseña"
+            required class="input7">
 
         <button type="submit">Completar registro</button>
         <h3>¿Ya tengo usuario? <a href="login"></a></h3>
@@ -47,7 +50,7 @@
 
 
 
-
+        </form>
 
     </div>
 
